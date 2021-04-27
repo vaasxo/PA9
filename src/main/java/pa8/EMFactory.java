@@ -11,21 +11,10 @@ public class EMFactory {
 		singleton = Persistence.createEntityManagerFactory("default");
 	}
 
-	public static javax.persistence.EntityManagerFactory getInstance() {
-		return singleton;
-	}
-
-	public EntityManagerFactory getEntityManagerFactory() {
+	public static EntityManagerFactory getEntityManagerFactory() {
 		if(singleton == null) {
 			singleton = Persistence.createEntityManagerFactory("default");
 		}
 		return singleton;
-	}
-
-	public void closeEmf() {
-		if (singleton.isOpen() || singleton != null) {
-			singleton.close();
-		}
-		singleton = null;
 	}
 }

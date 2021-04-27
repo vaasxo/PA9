@@ -7,12 +7,11 @@ import javax.persistence.EntityManagerFactory;
 import java.sql.Date;
 import java.util.List;
 
-
 public class Main {
 
 	public static void main(String[] args) {
 
-		EntityManagerFactory factory = EMFactory.getInstance();
+		EntityManagerFactory factory = EMFactory.getEntityManagerFactory();
 		EntityManager em = factory.createEntityManager();
 
 		Movies movie = new Movies();
