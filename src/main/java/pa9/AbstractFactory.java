@@ -1,22 +1,22 @@
-package pa8;
+package pa9;
 
 import java.sql.SQLException;
 import java.util.List;
 
-public interface DirectorDAO {
+public interface AbstractFactory<T> {
 
-	int add(Director director)
+	int add(T t)
 			throws SQLException;
 
 	void delete(int id)
 			throws SQLException;
 
-	Director getDirector(int id)
+	T getClass(int id)
 			throws SQLException;
 
-	List<Director> getDirectors()
+	List<T> getClasses()
 			throws SQLException;
 
-	void update(Director director)
+	void update(T t)
 			throws SQLException;
 }

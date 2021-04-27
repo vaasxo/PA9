@@ -1,4 +1,4 @@
-package pa8;
+package pa9;
 
 import javax.persistence.Persistence;
 import javax.persistence.EntityManagerFactory;

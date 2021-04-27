@@ -1,16 +1,16 @@
-package pa8;
+package pa9;
 
 import java.sql.Date;
 
-public class Director {
+public class Actor {
 
 	private int id;
 	private String name;
 	private Date birthdate;
 
-	public Director(){}
+	public Actor(){}
 
-	public Director(int id, String name, Date birthdate) {
+	public Actor(int id, String name, Date birthdate) {
 		this.id = id;
 		this.name = name;
 		this.birthdate = birthdate;
@@ -42,7 +42,7 @@ public class Director {
 
 	@Override
 	public String toString() {
-		return "Director{" +
+		return "Actor{" +
 				"id=" + id +
 				", name='" + name + '\'' +
 				", birthdate=" + birthdate +

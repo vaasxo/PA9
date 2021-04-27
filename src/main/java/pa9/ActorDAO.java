@@ -1,22 +1,22 @@
-package pa8;
+package pa9;
 
 import java.sql.SQLException;
 import java.util.List;
 
-public interface AbstractFactory<T> {
+public interface ActorDAO {
 
-	int add(T t)
+	int add(Actor actor)
 			throws SQLException;
 
 	void delete(int id)
 			throws SQLException;
 
-	T getClass(int id)
+	Actor getActor(int id)
 			throws SQLException;
 
-	List<T> getClasses()
+	List<Actor> getActors()
 			throws SQLException;
 
-	void update(T t)
+	void update(Actor actor)
 			throws SQLException;
 }

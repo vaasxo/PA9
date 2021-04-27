@@ -1,22 +1,22 @@
-package pa8;
+package pa9;
 
 import java.sql.SQLException;
 import java.util.List;
 
-public interface ActorDAO {
+public interface DirectorDAO {
 
-	int add(Actor actor)
+	int add(Director director)
 			throws SQLException;
 
 	void delete(int id)
 			throws SQLException;
 
-	Actor getActor(int id)
+	Director getDirector(int id)
 			throws SQLException;
 
-	List<Actor> getActors()
+	List<Director> getDirectors()
 			throws SQLException;
 
-	void update(Actor actor)
+	void update(Director director)
 			throws SQLException;
 }
