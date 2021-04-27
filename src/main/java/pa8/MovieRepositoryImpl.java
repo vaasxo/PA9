@@ -6,9 +6,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-public class MovieRepositoryImpl implements MovieRepository{
+public class MovieRepositoryImpl implements AbstractRepository<Movies>{
 
-	private EntityManager em;
+	private final EntityManager em;
 
 	MovieRepositoryImpl(EntityManager em)
 	{
