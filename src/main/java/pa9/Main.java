@@ -33,6 +33,10 @@ public class Main {
 		List<Movies> moviesList=movieRepository.findByName("The");
 		System.out.println(moviesList);
 
+		Chart chart = new Chart("chart1", releaseDate);
+		chart.readMoviesByID(100,movieRepository);
+		System.out.println(chart.getMoviesList());
+
 		em.close();
 		factory.close();
 	}

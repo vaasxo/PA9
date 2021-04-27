@@ -11,10 +11,9 @@ public class Chart {
 	private Date creationDate;
 	private List<Movies> moviesList;
 
-	public Chart(String name, Date creationDate, List<Movies> moviesList) {
+	public Chart(String name, Date creationDate) {
 		this.name = name;
 		this.creationDate = creationDate;
-		this.moviesList = moviesList;
 	}
 
 	public String getName() {
@@ -46,10 +45,16 @@ public class Chart {
 		{
 			moviesList.add(movieRepository.findById(i));
 		}
+		sortMovies();
 	}
 
 	public void readMoviesByName(String name, MovieRepositoryImpl movieRepository){
 		moviesList=movieRepository.findByName(name);
+		sortMovies();
+	}
+
+	private void sortMovies(){
+
 	}
 
 }
