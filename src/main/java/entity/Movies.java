@@ -1,7 +1,7 @@
 package entity;
 
 import javax.persistence.*;
-import java.sql.Time;
+import java.sql.Date;
 import java.util.Objects;
 
 @org.hibernate.annotations.NamedQuery(name="findByName", query="SELECT id FROM Movies WHERE title = :name")
@@ -10,9 +10,9 @@ import java.util.Objects;
 public class Movies {
 	private int id;
 	private String title;
-	private Time releaseDate;
-	private byte duration;
-	private Long score;
+	private Date releaseDate;
+	private int duration;
+	private Double score;
 	private String actorsNames;
 	private String directorsNames;
 
@@ -39,31 +39,31 @@ public class Movies {
 
 	@Basic
 	@Column(name = "RELEASE_DATE")
-	public Time getReleaseDate() {
+	public Date getReleaseDate() {
 		return releaseDate;
 	}
 
-	public void setReleaseDate(Time releaseDate) {
+	public void setReleaseDate(Date releaseDate) {
 		this.releaseDate = releaseDate;
 	}
 
 	@Basic
 	@Column(name = "DURATION")
-	public byte getDuration() {
+	public int getDuration() {
 		return duration;
 	}
 
-	public void setDuration(byte duration) {
+	public void setDuration(int duration) {
 		this.duration = duration;
 	}
 
 	@Basic
 	@Column(name = "SCORE")
-	public Long getScore() {
+	public Double getScore() {
 		return score;
 	}
 
-	public void setScore(Long score) {
+	public void setScore(Double score) {
 		this.score = score;
 	}
 
@@ -108,7 +108,7 @@ public class Movies {
 		int result = id;
 		result = 31 * result + (title != null ? title.hashCode() : 0);
 		result = 31 * result + (releaseDate != null ? releaseDate.hashCode() : 0);
-		result = 31 * result + (int) duration;
+		result = 31 * result + duration;
 		result = 31 * result + (score != null ? score.hashCode() : 0);
 		result = 31 * result + (actorsNames != null ? actorsNames.hashCode() : 0);
 		result = 31 * result + (directorsNames != null ? directorsNames.hashCode() : 0);

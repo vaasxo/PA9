@@ -1,11 +1,15 @@
 package pa8;
 
+import entity.Movies;
+
+import java.util.List;
+
 public interface MovieRepository {
 
-	void create(Movie movie);
+	void create(Movies movie);
 
-	Movie findById(int id);
+	Movies findById(int id);
 
-	Movie findByName(String name);
+	List<Movies> findByName(String name);
 
 }
